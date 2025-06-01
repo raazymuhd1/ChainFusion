@@ -12,7 +12,7 @@ const Card = ({ title, desc }: IProps) => {
 
        <div className='flex flex-col gap-[10px]'>
           <h3 className='font-semibold text-[clamp(1em,1.3em,1.5em)] '> { title } </h3>
-          <p className='text-[clamp(.8em,1em,1.2em)]'> {desc} </p>
+          <p className='text-[clamp(.8em,1em,1.2em)] text-[#9090a8] '> {desc} </p>
        </div>
     </div>
   )

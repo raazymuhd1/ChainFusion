@@ -1,12 +1,15 @@
 import React from 'react'
-import { Hero, Counters, FeaturesInfo } from "@/components"
+import { Header, Hero, Counters, FeaturesInfo, Banner, Footer } from "@/components"
 
 const Homepage = () => {
   return (
     <main>
+       <Header />
        <Hero />
        <Counters />
        <FeaturesInfo />
+       <Banner />
+       <Footer />
     </main>
   )
 }
