@@ -1,10 +1,11 @@
 import React from 'react'
-import { Hero } from "@/components"
+import { Hero, Counters } from "@/components"
 
 const Homepage = () => {
   return (
     <main>
        <Hero />
+       <Counters />
     </main>
   )
 }

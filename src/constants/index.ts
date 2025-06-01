@@ -1,32 +1,30 @@
-import { z } from "zod";
+import zod from "zod"
 
-interface User {
-    name: string;
-    age: number;
-    address: z.ZodString
-}
+const counters = zod.array(zod.object({
+    title: zod.string(),
+    value: zod.string(),
+}))
 
-// const user = {
-//     name: "mohammed",
-//     age: 20,
-//     address: z.string()
-// } satisfies User;
+const countersData = [
+    { 
+        value: "$2.5B+",
+        title: "Total Volume"
+     },
+    { 
+        value: "150K+",
+        title: "Active Users"
+     },
+    { 
+        value: "15+",
+        title: "Supported Chains"
+     },
+    { 
+        value: "99.9%",
+        title: "Uptime"
+     },
+]
 
-const User = z.object({
-    username: z.string(),
-    address: z.string(),
-    occupation: z.string(),
-    age: z.number(),
-    isSingle: z.boolean(),
-})
-
-const userData = User.parse({ 
-    username: "mohammed raazy",
-    address: "jakarta",
-    occupation: "Web/Blockchain Developer",
-    age: 20,
-    isSingle: true
- })
+counters.parse(countersData)
 
 
-console.log(userData.username)
+export { counters, countersData }
