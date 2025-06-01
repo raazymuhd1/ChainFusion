@@ -7,7 +7,7 @@ const Counters = () => {
         { countersData.map((count, idx) => (
             <aside
                 key={idx}
-                className='flex flex-col items-center gap-[5px]'>
+                className='flex flex-col items-center gap-[5px] cursor-pointer hover:scale-[1.1] transition-[scale_500ms] '>
                <h2 className='font-bold text-[clamp(1.3em,1.7em,2em)] '> { count.value } </h2>
                <h4> { count.title } </h4>
             </aside>

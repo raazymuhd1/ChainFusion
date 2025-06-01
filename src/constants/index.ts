@@ -24,7 +24,30 @@ const countersData = [
      },
 ]
 
+const cards = [
+    {
+        id: 1,
+        title: "Cross-Chain Trading",
+        desc: "Trade assets across multiple blockchains without leaving your preferred network"
+    },
+    {
+        id: 2,
+        title: "Secure Bridge",
+        desc: "Military-grade security protocols ensure your assets are safe during transfers"
+    },
+    {
+        id: 3,
+        title: "Lightning Fast",
+        desc: "Execute cross-chain transactions in seconds, not minutes"
+    },
+    {
+        id: 4,
+        title: "Multi-Chain Staking",
+        desc: "Stake tokens across different chains and maximize your yield potential"
+    }
+]
+
 counters.parse(countersData)
 
 
-export { counters, countersData }
+export { counters, countersData, cards }
