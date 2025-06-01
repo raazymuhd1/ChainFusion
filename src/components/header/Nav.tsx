@@ -1,5 +1,6 @@
 import React from 'react'
 import { CustomButton } from "@/components"
+import Link from 'next/link'
 
 const Nav = () => {
   return (
@@ -8,7 +9,9 @@ const Nav = () => {
         {/* logo */}
         <h2 className="font-extrabold  text-[clamp(1.2em,6vw,2em)]"> ChainFusion  </h2>
 
-        <CustomButton styles={`bg_gradients hover:translate-y-[-10px] transition-[transform,500ms]`} title='Launch App' />
+        <Link href="/main">
+            <CustomButton styles={`bg_gradients hover:translate-y-[-10px] transition-[transform,500ms]`} title='Launch App' />
+        </Link>
     </nav>
   )
 }

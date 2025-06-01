@@ -12,7 +12,7 @@ const Banner = () => {
             <input 
                 type="text" 
                 placeholder='Enter your email' 
-                className='py-[8px] min-h-[50px] w-full col-[1_/_span_2] bg-[#351a5c] px-[10px] rounded-[15px]' />
+                className='py-[8px] min-h-[50px] w-full col-[1_/_span_2] bg-[#18191d] px-[10px] rounded-[15px]' />
             <CustomButton styles='bg_gradients w-[30%] whitespace-nowrap h-[50px]' title="Get Early Access" />
         </aside>
     </section>

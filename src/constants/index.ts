@@ -47,7 +47,23 @@ const cards = [
     }
 ]
 
+const sidebarLinks = [
+    { id: 1, title: "Dashboard" },
+    { id: 2, title: "Bridge" },
+    { id: 3, title: "Swap" },
+    { id: 4, title: "NFT Marketplace" },
+    { id: 5, title: "Staking" },
+    { id: 6, title: "Settings" },
+]
+
+const dummyDashboard = [
+    { id: 1, title: "Total Portfolio", value: '$12,456.78' },
+    { id: 2, title: "Cross-chain Savings", value: '$892.34' },
+    { id: 3, title: "Active Bridges", value: '3' },
+    { id: 4, title: "Staking Rewards", value: '$234.56' },
+]
+
 counters.parse(countersData)
 
 
-export { counters, countersData, cards }
+export { counters, countersData, cards, sidebarLinks, dummyDashboard }

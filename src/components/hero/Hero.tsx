@@ -2,6 +2,7 @@ import React from 'react'
 import { FaRegStar  } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { CustomButton } from "@/components"
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -15,13 +16,15 @@ const Hero = () => {
 
         <div className={`md:w-[60%] w-[90%] mx-auto grid grid-cols-1 justify-items-center gap-[30px]`}>
             <h2 className='text-[clamp(1em,10vw,4em)] font-extrabold'> Trade Across </h2>
-            <h2 className='text-[clamp(1.5em,10vw,4em)] text-[#6ca54b] mt-[-40px] font-extrabold'> Any Blockchain </h2>
+            <h2 className='text-[clamp(1.5em,10vw,4em)] text-[#fd3870] mt-[-40px] font-extrabold'> Any Blockchain </h2>
             <p className='text-center wrap-anywhere md:w-[70%] w-full text-[clamp(1em,1.3em,1.5em)] text-[#9090a8] '> ChainFusion enables seamless cross-chain DeFi operations while keeping your liquidity on a single chain. Bridge, trade, and stake across 15+ blockchains with unprecedented ease. </p>
         </div>
 
         {/* buttons */}
         <div className='flex items-center gap-[20px] md:w-[30%] w-[90%] mx-auto justify-center '>
-            <CustomButton styles='bg_gradients opacity-[.8] hover:opacity-[1] transition-[opacity_1s] ' title="Start Exploring" Icon={FaArrowRightLong} />
+            <Link href="/main">
+                <CustomButton styles='bg_gradients opacity-[.8] hover:opacity-[1] transition-[opacity_1s] ' title="Start Exploring" Icon={FaArrowRightLong} />
+            </Link>
             <CustomButton styles='glass_bg opacity-[.8] hover:opacity-[1] transition-[opacity_1s]' title="Watch Demo" />
         </div>
     </section>

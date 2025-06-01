@@ -6,3 +6,7 @@ export { default as Counters } from "./counters/Counters"
 export { default as FeaturesInfo } from "./features-info/FeaturesInfo"
 export { default as Banner } from "./banner/Banner"
 export { default as Footer } from "./footer/Footer"
+
+// MAIN APP
+export { default as Sidebar } from "./sidebar/Sidebar"
+export { default as Dashboard } from "./dashboard/Dashboard"
