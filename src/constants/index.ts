@@ -1,9 +1,7 @@
-import zod from "zod"
 
-const counters = zod.array(zod.object({
-    title: zod.string(),
-    value: zod.string(),
-}))
+import { MdOutlineHistory } from "react-icons/md"
+import { LuArrowUpDown  } from "react-icons/lu";
+import { BiCoinStack } from "react-icons/bi";
 
 const countersData = [
     { 
@@ -63,7 +61,24 @@ const dummyDashboard = [
     { id: 4, title: "Staking Rewards", value: '$234.56' },
 ]
 
-counters.parse(countersData)
+const quickActions = [
+    { id: 1, title: "Cross-chain Bridge", Icon: LuArrowUpDown, url: "/bridge", bgColor: "" },
+    { id: 2, title: "Start Staking", Icon: BiCoinStack, url: "/staking", bgColor: "" },
+    { id: 3, title: "View History", Icon: MdOutlineHistory, url: "/tx-history", bgColor: "" },
+]
 
+const recentTxs = [
+    { id: 1, type: "Bridge", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
+    { id: 2, type: "NFT Purchase", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
+    { id: 3, type: "Stake", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
+]
 
-export { counters, countersData, cards, sidebarLinks, dummyDashboard }
+const recentTxsHeader = [
+    "Type",
+    "Networks",
+    "Status",
+    "Value",
+    "Tx-Hash"
+]
+
+export { countersData, cards, sidebarLinks, dummyDashboard, quickActions, recentTxs, recentTxsHeader }

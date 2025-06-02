@@ -1,6 +1,8 @@
 import React from 'react'
 import {dummyDashboard} from "@/constants"
 import { MdOutlineShowChart } from "react-icons/md";
+import QuickActions from "./QuickActions"
+import RecentTxs from "./RecentTxs"
 
 const Dashboard = () => {
 
@@ -20,18 +22,26 @@ const Dashboard = () => {
     }
 
   return (
-    <section className="flex-1 p-[20px]">
+    <section className="flex-1 flex flex-col gap-[20px] p-[20px]">
         <aside className='flex flex-col'>
             <h2 className='font-bold text-[clamp(1vw,2vw,2vw)]'> Dashboard </h2>
             <p className='text-[#fefffe]'> Welcome back to ChainFusion </p>
         </aside>
 
-        <div className='flex mt-[30px] items-center gap-[10px] flex-wrap place-content-center '>
+        <div className='flex mt-[30px] items-center gap-[20px] flex-wrap place-content-center '>
             { handleDashboardData("Total Portfolio", `$12,456.78`, `+12.5%`) }
             { handleDashboardData("Cross-chain Savings", `$892.34`, `+5.2%`) }
             { handleDashboardData("Active Bridges", `3`, `1`) }
             { handleDashboardData("Staking Rewards", `$234.56`, `+18.7%`) }
         </div>
+
+        <span className='flex lg:flex-nowrap flex-wrap items-center w-full gap-[20px]'>
+            {/* chart goes here */}
+            <h2 className='w-[50%]'> Chart </h2>
+            <QuickActions />
+        </span>
+
+        <RecentTxs />
     </section>
   )
 }
