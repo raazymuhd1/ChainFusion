@@ -7,6 +7,8 @@
 
 :root {
     --main-color: #18191d;
+    --secondry-bgColor: #fd3870;
+    --success-bg: #5aac35;
     --shade-color: #6d4186;
     --main-text-color: #fefffe;
     --bg-gradients: linear-gradient(0.35turn, #18191d 40%, #fd3870 80%);

@@ -1,7 +1,12 @@
 
 import { MdOutlineHistory } from "react-icons/md"
-import { LuArrowUpDown  } from "react-icons/lu";
 import { BiCoinStack } from "react-icons/bi";
+import { IconType } from 'react-icons/lib'
+import { GoHome } from "react-icons/go";
+import { FiShoppingBag } from "react-icons/fi";
+import { MdOutlineSettings } from "react-icons/md";
+import { LuArrowUpDown, LuArrowRightLeft  } from "react-icons/lu";
+
 
 const countersData = [
     { 
@@ -46,12 +51,12 @@ const cards = [
 ]
 
 const sidebarLinks = [
-    { id: 1, title: "Dashboard" },
-    { id: 2, title: "Bridge" },
-    { id: 3, title: "Swap" },
-    { id: 4, title: "NFT Marketplace" },
-    { id: 5, title: "Staking" },
-    { id: 6, title: "Settings" },
+    { id: 1, title: "Dashboard", url: "/main", Icon: GoHome },
+    { id: 2, title: "Bridge", url: "/bridge", Icon: LuArrowUpDown },
+    { id: 3, title: "Swap", url: "/swap", Icon: LuArrowRightLeft },
+    { id: 4, title: "NFT Marketplace", url: "/marketplace", Icon: FiShoppingBag },
+    { id: 5, title: "Staking", url: "/staking", Icon: BiCoinStack },
+    { id: 6, title: "Settings", url: "/settings", Icon: MdOutlineSettings },
 ]
 
 const dummyDashboard = [
@@ -62,14 +67,15 @@ const dummyDashboard = [
 ]
 
 const quickActions = [
-    { id: 1, title: "Cross-chain Bridge", Icon: LuArrowUpDown, url: "/bridge", bgColor: "" },
-    { id: 2, title: "Start Staking", Icon: BiCoinStack, url: "/staking", bgColor: "" },
-    { id: 3, title: "View History", Icon: MdOutlineHistory, url: "/tx-history", bgColor: "" },
+    { id: 1, title: "Cross-chain Bridge", Icon: LuArrowUpDown, url: "/bridge",  bgColor: "#18191d" },
+    { id: 2, title: "Start Staking", Icon: BiCoinStack, url: "/staking", 
+        bgColor: "#f94b78" },
+    { id: 3, title: "View History", Icon: MdOutlineHistory, url: "/tx-history", bgColor: "#5aac35" },
 ]
 
 const recentTxs = [
     { id: 1, type: "Bridge", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
-    { id: 2, type: "NFT Purchase", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
+    { id: 2, type: "NFT", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
     { id: 3, type: "Stake", networks: "ethereum -> bsc", value: "100 USDT", status: "Completed", hash: "0x000" },
 ]
 

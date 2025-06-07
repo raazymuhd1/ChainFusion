@@ -11,21 +11,21 @@ const Dashboard = () => {
             <div className='p-[20px] min-h-[150px] flex flex-col justify-between glass_bg flex-1 gap-[20px] rounded-[15px]'>
                 <div className='flex items-center w-full justify-between'>
                     {/* icon */}
-                    <MdOutlineShowChart className='bg-[#f94b78] w-[30px] h-[30px] p-[5px] rounded-[15px]' />
+                    <MdOutlineShowChart className='bg-[var(--secondry-bgColor)] w-[30px] h-[30px] p-[5px] rounded-[15px]' />
                     <p className='text-[#5aac35] font-bold'> { increasePercentages } </p>
                 </div>
 
-                <p className='text-[#fefffe]'> { title } </p>
+                <p className='text-[var(--main-text-color)]'> { title } </p>
                 <h3 className='font-extrabold text-[clamp(1vw,1.5vw,2vw)] translate-y-[-10px]'> { val } </h3>
             </div>
         )
     }
 
   return (
-    <section className="flex-1 flex flex-col gap-[20px] p-[20px]">
+    <section className="flex-1 flex flex-col gap-[20px] p-[30px]">
         <aside className='flex flex-col'>
             <h2 className='font-bold text-[clamp(1vw,2vw,2vw)]'> Dashboard </h2>
-            <p className='text-[#fefffe]'> Welcome back to ChainFusion </p>
+            <p className='text-[var(--main-text-color)]'> Welcome back to ChainFusion </p>
         </aside>
 
         <div className='flex mt-[30px] items-center gap-[20px] flex-wrap place-content-center '>

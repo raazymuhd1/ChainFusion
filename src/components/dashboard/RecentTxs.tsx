@@ -22,8 +22,8 @@ const RecentTxs = () => {
                                 ${(title.toLowerCase() == "hash") 
                                     ? "text-[#4c91c9] underline font-semibold" 
                                     : title.toLowerCase() == 'status' 
-                                    ? "bg-[#5aac35]" 
-                                    : "bg-[#f94b78]"
+                                    ? "bg-[var(--success-bg)]" 
+                                    : "bg-[var(--secondry-bgColor)]"
                                  } 
                                  py-[3px] px-[5px] rounded-[10px]`}> 
                         {val} 
@@ -51,7 +51,7 @@ const RecentTxs = () => {
         </article> */}
 
         <article className='flex flex-col gap-[10px]'>
-            <aside className='mt-[30px] flex items-center justify-around'>
+            <aside className='mt-[20px] flex items-center justify-around'>
                 { recentTxsHeader.map((txHeader, idx) => (
                     <h4 className='font-semibold underline underline-offset-[8px] ' key={idx}>
                         { txHeader }
@@ -63,12 +63,12 @@ const RecentTxs = () => {
                 { recentTxs.map(tx => (
                     <div key={tx.id} className='w-full flex items-start justify-around glass_bg p-[20px] rounded-[10px] translate-x-[-10px]'>
                         <div className='flex items-center gap-[5px]'>
-                            <LuArrowUpDown className={`w-[25px] h-[25px] bg-[#f94b78] p-[5px] rounded-[10px]`} />
+                            <LuArrowUpDown className={`w-[25px] h-[25px] bg-[var(--secondry-bgColor)] p-[2px] rounded-[10px]`} />
                             <h4 className='font-bold'> { tx.type } </h4>
                         </div>
-                        <p className='bg-[#f94b78] p-[5px] rounded-[10px]'> { tx.networks } </p>
-                        <p className='px-[10px] py-[5px] bg-[#5aac35] rounded-[10px]'> { tx.status } </p>
-                        <h4 className='bg-[#f94b78] p-[5px] rounded-[10px]'> { tx.value } </h4>
+                        <p className='bg-[var(--secondry-bgColor)] p-[2px] rounded-[10px]'> { tx.networks } </p>
+                        <p className='p-[2px] bg-[var(--success-bg)] rounded-[10px]'> { tx.status } </p>
+                        <h4 className='bg-[var(--secondry-bgColor)] p-[2px] rounded-[10px]'> { tx.value } </h4>
                         <aside className='flex items-center gap-[5px]'>
                             <p className='text-[#4c91c9] underline font-semibold'> { tx.hash } </p>
                             <a href={`${tx.hash}`} target='_blank' className={``}> 
