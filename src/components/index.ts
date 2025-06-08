@@ -10,3 +10,7 @@ export { default as Footer } from "./footer/Footer"
 // MAIN APP
 export { default as Sidebar } from "./sidebar/Sidebar"
 export { default as Dashboard } from "./dashboard/Dashboard"
+export { default as Settings } from "./settings/Settings"
+
+// PROVIDERS
+export { default as Web3Provider } from "./Web3Provider"

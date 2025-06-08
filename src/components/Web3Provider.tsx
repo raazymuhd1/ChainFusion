@@ -1,8 +1,11 @@
+"use client"
 import React from 'react'
 import { http, createConfig, WagmiProvider } from "wagmi"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { CivicAuthProvider } from "@civic/auth/nextjs";
 import { sepolia } from "wagmi/chains"
 import { embeddedWallet } from "@civic/auth-web3/wagmi"
+import useCreateWallet from "@/hooks/useCreateWallet"
 
 export const config = createConfig({
     chains: [sepolia],
@@ -12,13 +15,20 @@ export const config = createConfig({
     connectors: [embeddedWallet()]
   })
 
-const Web3Provider = (children: React.ReactNode) => {
+const queryClient = new QueryClient();
+
+const Web3Provider = ({children}: { children: React.ReactNode}) => {
+    // create a wallet for a user
+    useCreateWallet()
+
   return (
-    <WagmiProvider config={config}>
-        <CivicAuthProvider displayMode='redirect'>
-            {children}
-        </CivicAuthProvider>
-    </WagmiProvider>
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient} >
+                  <CivicAuthProvider displayMode='redirect'>
+                      {children}
+                  </CivicAuthProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
   )
 }
 

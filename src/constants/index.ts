@@ -52,11 +52,11 @@ const cards = [
 
 const sidebarLinks = [
     { id: 1, title: "Dashboard", url: "/main", Icon: GoHome },
-    { id: 2, title: "Bridge", url: "/bridge", Icon: LuArrowUpDown },
-    { id: 3, title: "Swap", url: "/swap", Icon: LuArrowRightLeft },
-    { id: 4, title: "NFT Marketplace", url: "/marketplace", Icon: FiShoppingBag },
-    { id: 5, title: "Staking", url: "/staking", Icon: BiCoinStack },
-    { id: 6, title: "Settings", url: "/settings", Icon: MdOutlineSettings },
+    { id: 2, title: "Bridge", url: "/main/bridge", Icon: LuArrowUpDown },
+    { id: 3, title: "Swap", url: "/main/swap", Icon: LuArrowRightLeft },
+    { id: 4, title: "NFT Marketplace", url: "/main/marketplace", Icon: FiShoppingBag },
+    { id: 5, title: "Staking", url: "/main/staking", Icon: BiCoinStack },
+    { id: 6, title: "Settings", url: "/main/settings", Icon: MdOutlineSettings },
 ]
 
 const dummyDashboard = [
@@ -87,4 +87,11 @@ const recentTxsHeader = [
     "Tx-Hash"
 ]
 
-export { countersData, cards, sidebarLinks, dummyDashboard, quickActions, recentTxs, recentTxsHeader }
+
+const notifSettings = [
+    { id: 1, title: "Transaction notifications", desc: "Get notified about transaction status" },
+    { id: 2, title: "Price alerts", desc: "Receive alerts for significant price movements" },
+]
+
+
+export { countersData, cards, sidebarLinks, dummyDashboard, quickActions, recentTxs, recentTxsHeader, notifSettings }

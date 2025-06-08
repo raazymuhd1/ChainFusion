@@ -1,8 +1,10 @@
 import React from 'react'
+import { Sidebar } from "@/components"
 
-const MainLayout = (children: React.ReactNode) => {
+const MainLayout = ({children}: { children: React.ReactNode}) => {
   return (
-    <main>
+    <main className={`w-full flex`}>
+        <Sidebar />
         {children}
     </main>
   )

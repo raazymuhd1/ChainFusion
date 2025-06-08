@@ -1,6 +1,8 @@
+
 import React from 'react'
 import { CustomButton } from "@/components"
 import Link from 'next/link'
+import { UserButton } from '@civic/auth-web3/react'
 
 const Nav = () => {
   return (
@@ -11,6 +13,7 @@ const Nav = () => {
 
         <Link href="/main">
             <CustomButton styles={`bg_gradients hover:translate-y-[-10px] transition-[transform,500ms]`} title='Launch App' />
+            {/* <UserButton /> */}
         </Link>
     </nav>
   )

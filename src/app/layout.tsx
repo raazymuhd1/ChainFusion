@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import  "./globals.css";
 import { Header } from "@/components";
-
-// client id from Civic
-// const civicClientId = 'f3465579-401a-4d88-825d-225446db439e'
+import { Web3Provider } from "@/components"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Header /> */}
-        {children}
+        {/* <Web3Provider> */}
+            {/* <Header /> */}
+            {children}
+        {/* </Web3Provider> */}
       </body>
     </html>
   );
