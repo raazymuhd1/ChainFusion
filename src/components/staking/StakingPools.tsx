@@ -9,8 +9,7 @@ type TProps = {
     details: {
            title: string;
            value: string;
-        }[]
-    
+        }[] 
 }
 
 const StakingPools = ({ title, network, details }: TProps) => {
@@ -20,23 +19,23 @@ const StakingPools = ({ title, network, details }: TProps) => {
         <aside className='w-full glass_bg p-[20px] rounded-[15px] grid grid-cols-[repeat(3,minmax(200px,1fr))]'>
 
             <div className='flex items-center gap-[10px]'>
-                <PiCoinBold className='w-[35px] h-[35px]' />
+                <PiCoinBold className='w-[35px] h-[35px] p-[5px] rounded-[15px] bg-[#fd3870]' />
                 <div className=''>
-                    <h4> { title } </h4>
-                    <p> { network } </p>
+                    <h4 className='font-bold text-[clamp(16px,1vw,22px)]'> { title } </h4>
+                    <p className='text-[var(--grey-color)]'> { network } </p>
                 </div>
             </div>
 
             <div className='flex items-center gap-[20px]'>
                 { details.map((detail, idx) => (
                     <div key={idx} className=''>
-                        <p> { detail.title } </p>
-                        <h5> { detail.value } </h5>
+                        <p className='text-[var(--grey-color)]'> { detail.title } </p>
+                        <h5 className='font-bold text-[clamp(16px,1vw,18px)]'> { detail.value } </h5>
                     </div>
                 )) }
             </div>
 
-           <CustomButton styles='' title="Stake" />
+           <CustomButton styles='bg-[#fd3870] py-[5px] px-[8px]' title="Stake" />
         </aside>
     </section>
   )

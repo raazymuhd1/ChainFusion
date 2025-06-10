@@ -4,7 +4,7 @@ import StakingTabs from "./StakingTabs"
 
 const Staking = () => {
   return (
-    <section className='w-full p-[30px] grid grid-rows-[repeat(3,minmax(100px,1fr))] gap-[20px]'>
+    <section className='w-full max-h-[500px] p-[30px] grid grid-rows-[repeat(3,minmax(10px,1fr))] gap-[30px]'>
          <div className=''>
            <h2 className='font-extrabold text-[clamp(1.4vw,2.5vw,3vw)]'> Staking </h2>
            <p className='font-normal text-[clamp(.8vw,1,2vw,1.5vw)] text-[var(--grey-color)] '> Earn rewards by staking your tokens across multiple chains </p>

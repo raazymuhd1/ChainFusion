@@ -16,7 +16,7 @@ const StakingTabs = () => {
      }
 
   return (
-    <section className='w-full'>
+    <section className='w-full grid grid-rows-[repeat(2)] gap-[20px]'>
         <div className='w-[30%] border-[1px] flex items-center p-[10px] rounded-[15px]'>
             { activeTabs.map(tab => (
                 <h4 
@@ -26,11 +26,12 @@ const StakingTabs = () => {
             )) }
         </div>
 
-        
-        {/* available pools */}
-        { availablePools.map(pool => (
-            <StakingPools key={pool.id} { ...pool }  />
-        )) }
+        <aside className='grid grid-cols-[repeat(1)] gap-[20px]'>
+            {/* available pools */}
+            { availablePools.map(pool => (
+                <StakingPools key={pool.id} { ...pool }  />
+            )) }
+        </aside>
     </section>
   )
 }
