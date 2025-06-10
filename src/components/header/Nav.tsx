@@ -12,7 +12,7 @@ const Nav = () => {
         <h2 className="font-extrabold  text-[clamp(1.2em,6vw,2em)]"> ChainFusion  </h2>
 
         <Link href="/main">
-            <CustomButton styles={`bg_gradients hover:translate-y-[-10px] transition-[transform,500ms]`} title='Launch App' />
+            <CustomButton styles={`bg_gradients hover:translate-y-[-10px] transition-[transform,500ms] p-[15px] `} title='Launch App' />
             {/* <UserButton /> */}
         </Link>
     </nav>

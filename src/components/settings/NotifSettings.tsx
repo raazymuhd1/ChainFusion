@@ -4,7 +4,7 @@ import { notifSettings } from '@/constants';
 
 const NotifSettings = () => {
   return (
-    <section className='w-[80%] flex flex-col gap-[20px] glass_bg p-[20px] rounded-[15px]'>
+    <section className='w-full flex flex-col gap-[20px] glass_bg p-[20px] rounded-[15px]'>
         <aside className='flex items-center gap-[10px]'>
             <FaRegBell  className='w-[calc(1em+9px)] h-[25px] glass_bg' />
             <h3 className='font-bold text-[clamp(1vw,1.5vw,2vw)]'> Notifications </h3>

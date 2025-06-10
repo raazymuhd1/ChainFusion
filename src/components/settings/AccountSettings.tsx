@@ -3,7 +3,7 @@ import { MdOutlineSettings } from "react-icons/md";
 
 const AccountSettings = () => {
   return (
-    <div className='w-[80%] flex flex-col gap-[25px] p-[20px] glass_bg rounded-[10px] mt-[40px]'>
+    <div className='w-full flex flex-col gap-[25px] p-[20px] glass_bg rounded-[10px] mt-[40px]'>
         <aside className='flex items-center gap-[10px]'>
             <MdOutlineSettings className='w-[calc(1em+9px)] h-[25px] glass_bg' />
             <h3 className='font-bold text-[clamp(1vw,1.5vw,2vw)]'> Account Settings </h3>

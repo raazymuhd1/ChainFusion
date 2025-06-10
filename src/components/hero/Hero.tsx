@@ -23,9 +23,9 @@ const Hero = () => {
         {/* buttons */}
         <div className='flex items-center gap-[20px] md:w-[30%] w-[90%] mx-auto justify-center '>
             <Link href="/main">
-                <CustomButton styles='bg_gradients opacity-[.8] hover:opacity-[1] transition-[opacity_1s] ' title="Start Exploring" Icon={FaArrowRightLong} />
+                <CustomButton styles='bg_gradients opacity-[.8] hover:opacity-[1] transition-[opacity_1s]  p-[1em]' title="Start Exploring" Icon={FaArrowRightLong} />
             </Link>
-            <CustomButton styles='glass_bg opacity-[.8] hover:opacity-[1] transition-[opacity_1s]' title="Watch Demo" />
+            <CustomButton styles='glass_bg opacity-[.8] hover:opacity-[1] transition-[opacity_1s] p-[1em]' title="Watch Demo" />
         </div>
     </section>
   )

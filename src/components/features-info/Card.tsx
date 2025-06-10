@@ -1,13 +1,14 @@
 import React from 'react'
 
 interface IProps {
+   id: number;
    title: string;
    desc: string;
 }
 
-const Card = ({ title, desc }: IProps) => {
+const Card = ({ title, desc, id }: IProps) => {
   return (
-    <div className='flex glass_bg min-h-[250px] flex-col gap-[10px] p-[20px] rounded-[15px] hover:translate-y-[-10px] transition-[transform_1s] cursor-pointer'>
+    <div className={`flex glass_bg min-h-[250px] flex-col gap-[10px] p-[20px] rounded-[15px] hover:translate-y-[-10px] transition-[transform_1s] cursor-pointer ${id == 1 && "spanning"} `}>
         {/* logo goes here */}
 
        <div className='flex flex-col gap-[10px]'>

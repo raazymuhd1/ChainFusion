@@ -4,9 +4,10 @@ import { BiCoinStack } from "react-icons/bi";
 import { IconType } from 'react-icons/lib'
 import { GoHome } from "react-icons/go";
 import { FiShoppingBag } from "react-icons/fi";
-import { MdOutlineSettings } from "react-icons/md";
+import { MdOutlineSettings, MdOutlineStackedLineChart  } from "react-icons/md";
 import { LuArrowUpDown, LuArrowRightLeft  } from "react-icons/lu";
-
+import { PiCoinsBold } from "react-icons/pi";
+import { RiChatHistoryLine } from "react-icons/ri";
 
 const countersData = [
     { 
@@ -93,5 +94,61 @@ const notifSettings = [
     { id: 2, title: "Price alerts", desc: "Receive alerts for significant price movements" },
 ]
 
+// staking dummy data
+const stakingData = [
+    { id: 1, title: "Total Staked", value: "6,234", Icon: PiCoinsBold },
+    { id: 2, title: "Total Rewards", value: "169", Icon: MdOutlineStackedLineChart },
+    { id: 3, title: "Avg APY", value: "12", Icon: RiChatHistoryLine },
+]
 
-export { countersData, cards, sidebarLinks, dummyDashboard, quickActions, recentTxs, recentTxsHeader, notifSettings }
+const availablePools = [
+    { 
+        id: 1, title: "ETH-USDT", network: "BSC", 
+        details: [
+            {
+                title: "APY",
+                value: "12.5"
+            },
+            {
+                title: "TVL",
+                value: "2.4"
+            },
+            {
+                title: "Your Stake",
+                value: "1,234.56"
+            },
+            {
+                title: "Rewards",
+                value: "45.67"
+            }
+        ] 
+    },
+    { 
+        id: 2, title: "ETH-USDC", network: "ETH", 
+        details: [
+            {
+                title: "APY",
+                value: "8.2"
+            },
+            {
+                title: "TVL",
+                value: "890"
+            },
+            {
+                title: "Your Stake",
+                value: "5,000.00"
+            },
+            {
+                title: "Rewards",
+                value: "123.45"
+            }
+        ] 
+    }
+]
+
+export { 
+    countersData, cards, 
+    sidebarLinks, dummyDashboard, 
+    quickActions, recentTxs, recentTxsHeader, notifSettings, 
+    stakingData, availablePools 
+}

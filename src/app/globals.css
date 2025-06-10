@@ -8,7 +8,7 @@
     --shade-color: #6d4186;
     --main-text-color: #fefffe;
     --grey-color: #918888;
-    --bg-gradients: linear-gradient(0.65turn, #18191d 40%, #fd3870 80%);
+    --bg-gradients: linear-gradient(40deg, #18191d 40%, #fd3870 80%);
    
 }
 
@@ -32,4 +32,10 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(241, 203, 210, 0.3);
+}
+
+
+/* features-info */
+.spanning {
+   grid-column: 1 / span 2;
 }

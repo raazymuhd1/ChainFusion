@@ -11,9 +11,9 @@ const FeaturesInfo = () => {
             <p className='text-[clamp(1em,1vw,1.5em)] md:w-[80%] w-full text-center'> Everything you need to navigate the multi-chain ecosystem with confidence and efficiency. </p>
         </div>
 
-        <div className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[20px]'>
+        <div className='w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[20px]'>
             { cards.map(card => (
-                <Card key={card.id} { ...{ title: card.title, desc: card.desc } } />
+                <Card key={card.id} { ...card } />
             )) }
         </div>
     </section>

@@ -27,7 +27,9 @@ const SidebarLinks = () => {
         { handleSidebarLinks("Settings", MdOutlineSettings) } */}
 
         { sidebarLinks.map(link => (
-             <Link href={link.url} className='flex items-center gap-[10px] rounded-[15px] hover:bg-[#18191d] transition-[background_1s] cursor-pointer p-[20px] w-[80%]'>
+             <Link 
+              key={link.id}
+              href={link.url} className='flex items-center gap-[10px] rounded-[15px] hover:bg-[#18191d] transition-[background_1s] cursor-pointer p-[20px] w-[80%]'>
                 <link.Icon className='w-[20px] h-[20px]' />
                 <h4 className='font-bold text-[clamp(.5vw,1.2vw,2vw)] '> { link.title } </h4>
               </Link>

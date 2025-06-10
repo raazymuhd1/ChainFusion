@@ -1,8 +1,11 @@
 import React from 'react'
+import { Staking } from "@/components"
 
 const StakingPage = () => {
   return (
-    <div>StakingPage</div>
+    <main className="w-full">
+       <Staking />
+    </main>
   )
 }
 
