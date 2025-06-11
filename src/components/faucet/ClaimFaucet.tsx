@@ -10,7 +10,7 @@ const selectedTokenInfo = [
 
 const ClaimFaucet = () => {
   return (
-    <aside className='glass_bg grid grid-cols-[1fr] gap-[20px] w-[50%] rounded-[15px] p-[20px]'>
+    <aside className='glass_bg grid grid-cols-[1fr] gap-[20px] w-[50%] rounded-[15px] p-[20px] shadows'>
         <h4 className="font-bold text-[clamp(18px,1vw,25px)]"> Claim Tokens </h4>
 
         {/* tokens option */}
@@ -19,8 +19,8 @@ const ClaimFaucet = () => {
             <div className='w-full grid grid-cols-[repeat(2,minmax(120px,1fr))] gap-[16px]'>
                 { tokensOption.map(token => (
                     <div 
-                        className='flex flex-col items-center gap-[5px] p-[15px] rounded-[15px] border-[1px] cursor-pointer' key={token.id}>
-                        <Image src={token.logo} alt="token-logo" className='object-cover rounded-[50%]' />
+                        className='flex flex-col items-center gap-[5px] p-[15px] rounded-[15px] border-[1px] border-[var(--border-col)] cursor-pointer hover:bg-[var(--warning)] transition-[background_1s]' key={token.id}>
+                        <Image src={token.logo} alt="token-logo" className='w-[30px] h-[30px] object-cover' />
                         <h4 className='font-bold'> { token.title } </h4>
                         <p className='text-[var(--grey-color)]'> { token.value } </p>
                     </div>
@@ -31,7 +31,7 @@ const ClaimFaucet = () => {
         {/* detail */}
         <div className='w-full flex flex-col gap-[10px] glass_bg rounded-[15px] p-[15px]'>
             <aside className='flex items-center gap-[10px]'>
-                <Image src={tokensOption[0].logo} alt="" className="" />
+                <Image src={tokensOption[0].logo} alt="" className="w-[30px] h-[30px] object-cover" />
                 <h3 className='font-bold'> USDC </h3>
             </aside>
             
@@ -51,7 +51,7 @@ const ClaimFaucet = () => {
                 <label htmlFor="wallet">Wallet Address:</label>
                 <input type="text" placeholder='0x..' className="p-[10px] rounded-[15px] w-full border-[1px]" />
             </aside>
-            <CustomButton styles="p-[8px] w-full bg-[#5aac35]" title={`Claim 100 USDC`} />
+            <CustomButton styles="p-[8px] w-full glass_orange" title={`Claim 100 USDC`} />
         </aside>
 
         {/* claim button */}

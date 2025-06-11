@@ -72,7 +72,7 @@ const dummyDashboard = [
 ]
 
 const quickActions = [
-    { id: 1, title: "Cross-chain Bridge", Icon: LuArrowUpDown, url: "/bridge",  bgColor: "#18191d" },
+    { id: 1, title: "Cross-chain Bridge", Icon: LuArrowUpDown, url: "/bridge",  bgColor: "rgba(245,97,0,255)" },
     { id: 2, title: "Start Staking", Icon: BiCoinStack, url: "/staking", 
         bgColor: "#f94b78" },
     { id: 3, title: "View History", Icon: MdOutlineHistory, url: "/tx-history", bgColor: "#5aac35" },

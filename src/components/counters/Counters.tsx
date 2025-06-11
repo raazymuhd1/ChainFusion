@@ -8,7 +8,7 @@ const Counters = () => {
             <aside
                 key={idx}
                 className='flex flex-col items-center gap-[5px] cursor-pointer hover:scale-[1.1] transition-[scale_500ms] '>
-               <h2 className='font-bold text-[clamp(1.3em,1.7em,2em)] text-[#fd3870]'> { count.value } </h2>
+               <h2 className='font-bold text-[clamp(1.3em,1.7em,2em)] text-[var(--warning)]'> { count.value } </h2>
                <h4 className='text-[#9090a8]'> { count.title } </h4>
             </aside>
         )) }

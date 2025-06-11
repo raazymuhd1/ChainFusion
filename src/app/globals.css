@@ -2,13 +2,18 @@
 
 
 :root {
-    --main-color: #18191d;
-    --secondry-bgColor: #fd3870;
+    --main-color: #090909;
+    --secondry-bgColor: rgba(245,97,0,255);
     --success: #5aac35;
+    --warning: rgba(245,97,0,255);
+    --purple: #51126f;
     --shade-color: #6d4186;
-    --main-text-color: #fefffe;
+    --border-col: rgba(241, 203, 210, 0.3);
+    --main-text-color: #fefefe;
     --grey-color: #918888;
-    --bg-gradients: linear-gradient(40deg, #18191d 40%, #fd3870 80%);
+    --bg-gradients: 
+        linear-gradient(45deg, #18191d 20%, var(--warning) 50%),
+        linear-gradient(0.3turn, #18191d 20%, var(--warning) 50%);
    
 }
 
@@ -17,21 +22,34 @@ body {
   color: var(--main-text-color);
 }
 
+.nav_shadows {
+   box-shadow: 0 2px 400px 0 rgba(245,97,0,255);
+}
+
 .bg_gradients {
-   background-image: var(--bg-gradients) ;
+   background-image: var(--warning) ;
 }
 
 .shadows {
-    box-shadow: 2px 2px 130px rgb(80, 79, 79)
+    box-shadow: 1px 1px 190px 0 var(--warning);
+}
+
+
+.glass_orange {
+    backdrop-filter: blur(6px) saturate(0%) opacity(50%) ;
+    -webkit-backdrop-filter: blur(6px) saturate(0%);
+    background-color: var(--warning);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .glass_bg {
-  background: rgba(241, 203, 210, 0.2);
+  background: rgba(20,20,20,255);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 330px  rgba(20,20,20,255);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(241, 203, 210, 0.3);
+  border: 1px solid var(--border-col);
 }
 
 

@@ -4,12 +4,12 @@ import TokenStatus from "./TokenStatus"
 
 const Faucet = () => {
   return (
-    <section className='p-[30px] w-[80%] grid grid-rows-[repeat(2,minmax(0,1fr))] justify-items-center '>
+    <section className='p-[30px] w-[80%] mx-auto grid grid-rows-[repeat(2,minmax(0,1fr))] justify-items-center '>
         {/* info */}
         {/* instructions */}
 
         {/* faucet details */}
-        <div className='w-full flex items-center gap-[15px]'>
+        <div className='w-full justify-center flex gap-[15px]'>
             <ClaimFaucet />
             <TokenStatus />
         </div>
