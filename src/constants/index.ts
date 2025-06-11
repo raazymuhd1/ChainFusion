@@ -8,6 +8,9 @@ import { MdOutlineSettings, MdOutlineStackedLineChart  } from "react-icons/md";
 import { LuArrowUpDown, LuArrowRightLeft  } from "react-icons/lu";
 import { PiCoinsBold } from "react-icons/pi";
 import { RiChatHistoryLine } from "react-icons/ri";
+import { FaFaucet } from "react-icons/fa";
+// images
+import { circle } from "@/assets";
 
 const countersData = [
     { 
@@ -57,7 +60,8 @@ const sidebarLinks = [
     { id: 3, title: "Swap", url: "/main/swap", Icon: LuArrowRightLeft },
     { id: 4, title: "NFT Marketplace", url: "/main/marketplace", Icon: FiShoppingBag },
     { id: 5, title: "Staking", url: "/main/staking", Icon: BiCoinStack },
-    { id: 6, title: "Settings", url: "/main/settings", Icon: MdOutlineSettings },
+    { id: 6, title: "Faucet", url: "/main/faucet", Icon: FaFaucet },
+    { id: 7, title: "Settings", url: "/main/settings", Icon: MdOutlineSettings },
 ]
 
 const dummyDashboard = [
@@ -146,9 +150,24 @@ const availablePools = [
     }
 ]
 
+// faucet 
+
+const tokensOption = [
+    { id: 1, title: "USDT", value: "100", logo: circle },
+    { id: 2, title: "USDC", value: "100", logo: circle },
+    { id: 3, title: "MATIC", value: "10", logo: circle },
+]
+
+const tokensStatus = [
+    { id: 1, name: "USDT", logo: circle, network: "Sepolia", status: "Available" },
+    { id: 2, name: "USDC", logo: circle, network: "Sepolia", status: "Available" },
+    { id: 3, name: "MATIC", logo: circle, network: "Sepolia", status: "Available" },
+]
+
 export { 
     countersData, cards, 
     sidebarLinks, dummyDashboard, 
     quickActions, recentTxs, recentTxsHeader, notifSettings, 
-    stakingData, availablePools 
+    stakingData, availablePools,
+    tokensOption, tokensStatus
 }

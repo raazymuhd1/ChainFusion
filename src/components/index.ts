@@ -12,6 +12,7 @@ export { default as Sidebar } from "./sidebar/Sidebar"
 export { default as Dashboard } from "./dashboard/Dashboard"
 export { default as Settings } from "./settings/Settings"
 export { default as Staking } from "./staking/Staking"
+export { default as Faucet } from "./faucet/Faucet"
 
 // PROVIDERS
 export { default as Web3Provider } from "./Web3Provider"

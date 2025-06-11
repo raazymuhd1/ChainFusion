@@ -4,7 +4,7 @@
 :root {
     --main-color: #18191d;
     --secondry-bgColor: #fd3870;
-    --success-bg: #5aac35;
+    --success: #5aac35;
     --shade-color: #6d4186;
     --main-text-color: #fefffe;
     --grey-color: #918888;
@@ -29,8 +29,8 @@ body {
   background: rgba(241, 203, 210, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(241, 203, 210, 0.3);
 }
 

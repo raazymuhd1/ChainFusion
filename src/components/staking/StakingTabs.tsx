@@ -10,27 +10,40 @@ const StakingTabs = () => {
      ]);
 
      const handleActiveTabs = (id: number) => {
-         setActiveTabs([
+        // make a copies of the array bfore updating the object inside of array
+        const tabs = [...activeTabs];
+        const tabIsActive = tabs.find(tab => tab.id === id)
+        const tabIsNotActive = tabs.filter(tab => tab.id !== id)
 
-         ])
+        // @ts-ignore
+        tabIsActive.active = true;
+        // @ts-ignore
+        tabIsNotActive.forEach(tab => {
+            tab.active = false;
+        })
+
+         setActiveTabs(tabs)
      }
 
+     console.log(activeTabs)
+
   return (
-    <section className='w-full grid grid-rows-[repeat(2)] gap-[20px]'>
-        <div className='w-[30%] border-[1px] flex items-center p-[10px] rounded-[15px]'>
+    <section className='w-full h-[300px] grid grid-rows-[repeat(2)] gap-[20px] box-border'>
+        <div className='w-[30%] max-h-[fit-content] border-[1px] flex items-center p-[10px] rounded-[15px]'>
             { activeTabs.map(tab => (
                 <h4 
                     key={tab.id}
-                    className='p-[10px] w-[50%] rounded-[15px] hover:bg-[#fd3870] cursor-pointer transition-[background_1s]'> All Pools
+                    onClick={() => handleActiveTabs(tab.id)}
+                    className={`${tab.active == true && "bg-[var(--secondry-bgColor)]"} p-[10px] w-[50%] rounded-[15px] hover:bg-[var(--secondry-bgColor)] cursor-pointer transition-[background_1s]`}> All Pools
                 </h4>
             )) }
         </div>
 
         <aside className='grid grid-cols-[repeat(1)] gap-[20px]'>
             {/* available pools */}
-            { availablePools.map(pool => (
+            { activeTabs[0].active == true ? availablePools.map(pool => (
                 <StakingPools key={pool.id} { ...pool }  />
-            )) }
+            )) : <h2> my stakes </h2> }
         </aside>
     </section>
   )
