@@ -14,7 +14,7 @@ const Settings = () => {
        <article className='w-[80%] flex flex-col gap-[30px]'>
           <AccountSettings />
           <NotifSettings />
-          <CustomButton title="Save Changes" styles='py-[10px] px-[14px] bg_gradients self-end' />
+          <CustomButton title="Save Changes" styles='py-[10px] px-[14px] bg-[var(--warning)] self-end' />
        </article>
     </div>
   )

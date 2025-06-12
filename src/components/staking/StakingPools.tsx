@@ -26,12 +26,12 @@ const StakingPools = ({ title, network, details }: TProps) => {
                 </div>
             </div>
 
-            <div className='flex items-center gap-[20px]'>
+            <div className='flex items-center gap-[30px]'>
                 { details.map((detail, idx) => (
                     <div key={idx} className=''>
                         <p className='text-[var(--grey-color)]'> { detail.title } </p>
                         <h5 
-                            className={`font-bold text-[clamp(16px,1vw,18px)]  ${(detail.title.toLowerCase() == "apy" || detail.title.toLowerCase() == "rewards") && "text-[var(--success-bg)]" } `}> { detail.title.toLowerCase() == "apy" ? `${detail.value}%` : detail.title.toLowerCase() == "tvl" ? `$${detail.value}` : detail.value } </h5>
+                            className={`font-bold text-[clamp(16px,1vw,18px)]  ${(detail.title.toLowerCase() == "apy" || detail.title.toLowerCase() == "rewards") && "text-[var(--success)]" } `}> { detail.title.toLowerCase() == "apy" ? `${detail.value}%` : detail.title.toLowerCase() == "tvl" ? `$${detail.value}` : detail.value } </h5>
                     </div>
                 )) }
             </div>

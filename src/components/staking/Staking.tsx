@@ -16,7 +16,7 @@ const Staking = () => {
               <div 
                 key={stake.id}
                 className='flex items-center gap-[5px] glass_bg p-[20px] rounded-[15px] min-h-[130px]'>
-                  <stake.Icon className='w-[35px] h-[35px] p-[5px] rounded-[15px] bg-[#fd3870] ' />
+                  <stake.Icon className='w-[35px] h-[35px] p-[5px] rounded-[15px] bg-[var(--warning)] ' />
                   <aside>
                       <p className='text-[var(--grey-color)] text-[clamp(14px,1vw,16px)]'> { stake.title } </p>
                       <h4 className="font-extrabold text-[clamp(16px,1.5vw,35px)] "> { stake.id != 3 ? `$${stake.value}` : `${stake.value}%` } </h4>

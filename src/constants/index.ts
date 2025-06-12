@@ -9,6 +9,7 @@ import { LuArrowUpDown, LuArrowRightLeft  } from "react-icons/lu";
 import { PiCoinsBold } from "react-icons/pi";
 import { RiChatHistoryLine } from "react-icons/ri";
 import { FaFaucet } from "react-icons/fa";
+import { FaArrowTrendUp, FaArrowTrendDown, FaDollarSign   } from "react-icons/fa6";
 // images
 import { circle } from "@/assets";
 
@@ -59,9 +60,10 @@ const sidebarLinks = [
     { id: 2, title: "Bridge", url: "/main/bridge", Icon: LuArrowUpDown },
     { id: 3, title: "Swap", url: "/main/swap", Icon: LuArrowRightLeft },
     { id: 4, title: "NFT Marketplace", url: "/main/marketplace", Icon: FiShoppingBag },
-    { id: 5, title: "Staking", url: "/main/staking", Icon: BiCoinStack },
-    { id: 6, title: "Faucet", url: "/main/faucet", Icon: FaFaucet },
-    { id: 7, title: "Settings", url: "/main/settings", Icon: MdOutlineSettings },
+    { id: 5, title: "Lending", url: "/main/lending", Icon: FiShoppingBag },
+    { id: 6, title: "Staking", url: "/main/staking", Icon: BiCoinStack },
+    { id: 7, title: "Faucet", url: "/main/faucet", Icon: FaFaucet },
+    { id: 8, title: "Settings", url: "/main/settings", Icon: MdOutlineSettings },
 ]
 
 const dummyDashboard = [
@@ -164,10 +166,28 @@ const tokensStatus = [
     { id: 3, name: "MATIC", logo: circle, network: "Sepolia", status: "Available" },
 ]
 
+// Lending & Borrowing
+const lendingData = [
+    { id: 1, title: "Total Supplied", logo: FaDollarSign, value: "45,231.82"},
+    { id: 2, title: "Total Borrowed", logo: FaArrowTrendDown, value: "12,543.21"},
+    { id: 3, title: "Net APY", logo: FaArrowTrendUp, value: "3.7"},
+]
+
+const lendingCardInfo = {
+    supply: {
+        apy: "4.5"
+    },
+    borrow: {
+        apy: "4.5",
+        limit: "25,431.82"
+    }
+}
+
 export { 
     countersData, cards, 
     sidebarLinks, dummyDashboard, 
     quickActions, recentTxs, recentTxsHeader, notifSettings, 
     stakingData, availablePools,
-    tokensOption, tokensStatus
+    tokensOption, tokensStatus,
+    lendingData, lendingCardInfo
 }

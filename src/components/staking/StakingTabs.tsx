@@ -34,7 +34,7 @@ const StakingTabs = () => {
                 <h4 
                     key={tab.id}
                     onClick={() => handleActiveTabs(tab.id)}
-                    className={`${tab.active == true && "bg-[var(--secondry-bgColor)]"} p-[10px] w-[50%] rounded-[15px] hover:bg-[var(--secondry-bgColor)] cursor-pointer transition-[background_1s]`}> All Pools
+                    className={`${tab.active == true && "bg-[var(--secondry-bgColor)]"} p-[10px] w-[50%] rounded-[15px] hover:bg-[var(--secondry-bgColor)] cursor-pointer transition-[background_1s]`}> { tab.title }
                 </h4>
             )) }
         </div>
