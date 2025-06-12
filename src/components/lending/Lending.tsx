@@ -1,6 +1,7 @@
 import React from 'react'
 import LendingInfo from './LendingInfo'
 import LendingCard from './LendingCard'
+import LendingPools from './LendingPools'
 
 const Lending = () => {
   return (
@@ -13,10 +14,12 @@ const Lending = () => {
         {/* lending info */}
         <LendingInfo />
 
-        {/* lending supply & borrow card */}
-        <LendingCard />
-
-        {/* available lending pools */}
+        <aside className='w-full grid gap-[20px] grid-cols-[repeat(2,minmax(0,1fr))]'>
+          {/* lending supply & borrow card */}
+          <LendingCard />
+          {/* available lending pools */}
+          <LendingPools />
+        </aside>
     </section>
   )
 }

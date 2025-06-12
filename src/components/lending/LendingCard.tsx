@@ -1,6 +1,7 @@
 "use client"
 import {useState} from 'react'
 import { lendingCardInfo } from '@/constants'
+import { CustomButton } from "@/components"
 
 const assets = ['ETH', "WBTC", "USDT", "USDC"]
 
@@ -9,7 +10,13 @@ const LendingCard = () => {
              { id: 1, title: "Supply", active: true },
              { id: 2, title: "Borrow", active: false },
          ]);
+    const SUPPLY_TABS = activeTabs[0]
+    const BORROW_TABS = activeTabs[1]
 
+        /**
+         * @de handling an active tabs
+         * @param id 
+         */
         const handleActiveTabs = (id: number) => {
             // make a copies of the array bfore updating the object inside of array
             const tabs = [...activeTabs];
@@ -27,14 +34,14 @@ const LendingCard = () => {
          }
 
   return (
-    <aside className='p-[20px] grid grid-cols-[repeat(1,minmax(0,1fr))] gap-[20px] rounded-[15px] w-[40%] glass_bg'>
+    <aside className='p-[20px] grid grid-cols-[repeat(1,minmax(0,1fr))] gap-[10px] rounded-[15px] w-[40%] glass_bg'>
         {/* tabs */}
         <div className='w-full max-h-[fit-content] border-[1px] flex items-center p-[10px] rounded-[15px]'>
             { activeTabs.map(tab => (
                 <h4 
                     key={tab.id}
                     onClick={() => handleActiveTabs(tab.id)}
-                    className={`${tab.active == true && "bg-[var(--secondry-bgColor)]"} p-[10px] w-[50%] rounded-[15px] hover:bg-[var(--secondry-bgColor)] cursor-pointer transition-[background_1s]`}> { tab.title }
+                    className={`${(tab.title.toLowerCase() == "supply" && tab.active == true) ? "bg-[var(--secondry-bgColor)]" : (tab.title.toLowerCase() == "borrow" && tab.active == true) && "bg-[var(--purple)]"} p-[10px] w-[50%] rounded-[15px] hover:text-[var(--main-color)] hover:bg-[var(--main-text-color)] cursor-pointer text-center transition-[background_1s] font-semibold`}> { tab.title }
                 </h4>
             )) }
         </div>
@@ -54,13 +61,24 @@ const LendingCard = () => {
            <label htmlFor="amount"> Amount </label>
            <aside className='w-full glass_bg border-[1px_var(--border-col)] flex items-center justify-between p-[5px] rounded-[15px]'>
             <input type="text" placeholder='0' id="amount" className='h-full w-[90%] active:border-none' />
-            <h5 className='w-[10%]'> Max </h5>
+            <h5 className='w-[10%] cursor-pointer'> Max </h5>
            </aside>
         </div>
 
         {/* extra info */}
-
+        <div className='glass_bg p-[15px] rounded-[15px]'>
+            { lendingCardInfo.map(info => (
+                <div key={info.id} className={`w-full flex items-center justify-between`}> 
+                    <p className={`text-[var(--grey-color)] font-semibold`}> { info.title } </p>
+                    <h3 className={`font-bold ${SUPPLY_TABS.active ? "text-[var(--warning)]" : "text-[var(--purple)]" }`}> { info.value } </h3>
+                </div>
+            )) }
+        </div>
         {/* button */}
+        <CustomButton 
+            styles={`w-full p-[5px] ${SUPPLY_TABS.active ? "shadows_orange" : "shadows_purple" }`} 
+            title={`${SUPPLY_TABS.active == true ? "Supply" : "Borrow"}`} 
+        />
     </aside>
   )
 }

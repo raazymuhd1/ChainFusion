@@ -173,15 +173,11 @@ const lendingData = [
     { id: 3, title: "Net APY", logo: FaArrowTrendUp, value: "3.7"},
 ]
 
-const lendingCardInfo = {
-    supply: {
-        apy: "4.5"
-    },
-    borrow: {
-        apy: "4.5",
-        limit: "25,431.82"
-    }
-}
+const lendingCardInfo = [
+    { id: 1, title: "Apy", value: "4.5" },
+    { id: 2, title: "Available Balance", value: "3" },
+    { id: 3, title: "Limit", value: "25,431.82" },
+]
 
 export { 
     countersData, cards, 
