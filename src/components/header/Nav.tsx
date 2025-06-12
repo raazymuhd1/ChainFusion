@@ -6,7 +6,8 @@ import { UserButton } from '@civic/auth-web3/react'
 
 const Nav = () => {
   return (
-    <nav className='h-full md:w-[80%] w-[90%] mx-auto flex justify-between items-center border-b-[1px_var(--border-col)] rounded-[15px] p-[20px] nav_shadows'>
+    <nav 
+      className='h-full md:w-[80%] w-[90%] mx-auto flex justify-between items-center border-b-[1px_var(--border-col)] rounded-[15px] p-[20px] nav_shadows'>
         {/* title * logo */}
         {/* logo */}
         <h2 className="font-extrabold  text-[clamp(1.2em,6vw,2em)]"> ChainFusion  </h2>

@@ -24,6 +24,11 @@ body {
 
 .nav_shadows {
    box-shadow: 0 2px 400px 0 rgba(245,97,0,255);
+   background: rgba(20,20,20,255);
+   border-radius: 16px;
+   backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
+   border: 1px solid var(--border-col);
 }
 
 .bg_gradients {
@@ -34,6 +39,16 @@ body {
     box-shadow: 1px 1px 190px 0 var(--warning);
 }
 
+
+/* footer */
+.footer_shadows {
+  box-shadow: 0 2px 400px 0 rgba(245,97,0,255);
+  background: rgba(20,20,20,255);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--border-col);
+}
 
 .glass_orange {
     backdrop-filter: blur(6px) saturate(0%) opacity(50%) ;

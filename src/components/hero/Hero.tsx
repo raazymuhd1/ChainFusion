@@ -23,7 +23,7 @@ const Hero = () => {
         {/* buttons */}
         <div className='flex items-center gap-[20px] md:w-[30%] w-[90%] mx-auto justify-center '>
             <Link href="/main">
-                <CustomButton styles='bg_gradients opacity-[.8] hover:opacity-[1] transition-[opacity_1s]  p-[8px]' title="Start Exploring" Icon={FaArrowRightLong} />
+                <CustomButton styles='bg-[var(--warning)] opacity-[.8] hover:opacity-[1] transition-[opacity_1s]  p-[8px]' title="Start Exploring" Icon={FaArrowRightLong} />
             </Link>
             <CustomButton styles='bg-[var(--main-text-color)] text-[var(--main-color)] opacity-[.8] hover:opacity-[1] transition-[opacity_1s] p-[8px]' title="Watch Demo" />
         </div>
