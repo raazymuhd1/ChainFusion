@@ -4,8 +4,8 @@ const instructions = ["Enter your wallet address to receive testnet token", "tok
 
 const Instructions = () => {
   return (
-    <section className='w-full flex flex-col gap-[10px] glass-card p-[20px]'>
-        <h2 className='font-bold text-[clamp(16px,1vw,25px]'> 🚧 Instructions </h2>
+    <section className='w-full flex flex-col gap-[10px] glass_bg rounded-[15px] p-[20px]'>
+        <h2 className='font-bold text-[clamp(18px,1vw,25px)]'> 🚧 Instructions </h2>
 
         <ul className='flex w-full list-container flex-col gap-[10px] p-[20px]'>
             { instructions.map((instruct, idx) => (

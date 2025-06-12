@@ -67,7 +67,7 @@ const RecentTxs = () => {
                             <h4 className='font-bold'> { tx.type } </h4>
                         </div>
                         <p className='bg-[var(--secondry-bgColor)] p-[2px] rounded-[10px]'> { tx.networks } </p>
-                        <p className='p-[2px] bg-[var(--success-bg)] rounded-[10px]'> { tx.status } </p>
+                        <p className='p-[2px] bg-[var(--success)] rounded-[10px]'> { tx.status } </p>
                         <h4 className='bg-[var(--secondry-bgColor)] p-[2px] rounded-[10px]'> { tx.value } </h4>
                         <aside className='flex items-center gap-[5px]'>
                             <p className='text-[#4c91c9] underline font-semibold'> { tx.hash } </p>

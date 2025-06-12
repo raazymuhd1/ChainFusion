@@ -12,7 +12,9 @@ const TokenStatus = () => {
         <aside className='w-full flex flex-col gap-[10px]'>
 
             { tokensStatus.map(status => (
-                <div key={status.id} className='p-[10px] rounded-[15px] glass_bg'>
+                <div 
+                    key={status.id} 
+                    className='p-[10px] hover:bg-[var(--warning)] transition-[background_1s] cursor-pointer rounded-[15px] glass_bg'>
                     {/* top */}
                     <aside className='w-full flex items-center justify-between'>
                         <div className='flex items-center gap-[10px]'>
