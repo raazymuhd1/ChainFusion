@@ -2,6 +2,7 @@ import React from 'react'
 import LendingInfo from './LendingInfo'
 import LendingCard from './LendingCard'
 import LendingPools from './LendingPools'
+import SupplyModal from './SupplyModal'
 
 const Lending = () => {
   return (
@@ -20,6 +21,8 @@ const Lending = () => {
           {/* available lending pools */}
           <LendingPools />
         </aside>
+
+         <SupplyModal />
     </section>
   )
 }

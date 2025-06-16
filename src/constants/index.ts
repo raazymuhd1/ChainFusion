@@ -193,11 +193,17 @@ const lendingPools = [
     { id: 4, asset: "WBTC", logo: circle,  supplyApy: "4.5", borrowApy: "12.3", liquidity: "2.1" },
 ]
 
+// supply modals
+const supplyInfo = [
+    { id: 1, title: "Supply APY", value: "4.5" },
+    { id: 1, title: "Estimated Yearly Earnings", value: "5" }
+]
+
 export { 
     countersData, cards, 
     sidebarLinks, dummyDashboard, 
     quickActions, recentTxs, recentTxsHeader, notifSettings, 
     stakingData, availablePools,
     tokensOption, tokensStatus,
-    lendingData, lendingCardInfo, lendingPools
+    lendingData, lendingCardInfo, lendingPools, supplyInfo
 }

@@ -80,6 +80,15 @@ body {
 }
 
 
+.modal_glass {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  background-color: rgba(54, 54, 65, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+
 /* features-info */
 .spanning {
    grid-column: 1 / span 2;
