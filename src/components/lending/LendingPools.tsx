@@ -7,7 +7,7 @@ const marketsHeader = ['Asset', ["Supply APY", "Borrow APY", "Liquidity"], "Acti
 
 const LendingPools = () => {
   return (
-    <aside className='w-[110%] flex flex-col gap-[20px] translate-x-[-5.5rem] glass_bg rounded-[15px] p-[20px]'>
+    <aside className='w-[120%] flex flex-col gap-[20px] translate-x-[-5.5rem] glass_bg rounded-[15px] p-[20px]'>
         <h4 className="font-extrabold text-[clamp(calc(1rem+4px),1vw,2rem)]"> Available Markets </h4>
 
         {/* headers */}
@@ -38,8 +38,8 @@ const LendingPools = () => {
 
                {/* actions */}
                 <div className='flex items-center gap-[10px]'>
-                  <CustomButton styles='bg-[var(--warning)] text-[clamp(.7rem,1vw,.9rem)]! w-[fit-content] p-[8px]' title='supply' />
-                  <CustomButton styles='bg-[var(--purple)] text-[clamp(.7rem,1vw,.9rem)]! w-[fit-content] p-[8px]' title='borrow' />
+                  <CustomButton styles='bg-[var(--warning)] text-[clamp(.7rem,1vw,.9rem)]! w-[fit-content]! p-[8px]' title='supply' />
+                  <CustomButton styles='bg-[var(--purple)] text-[clamp(.7rem,1vw,.9rem)]! w-[fit-content]! p-[8px]' title='borrow' />
                 </div>
            </div>
         )) }
