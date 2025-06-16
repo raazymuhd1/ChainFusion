@@ -11,14 +11,15 @@ const Faucet = () => {
             <h2 className='font-bold text-[clamp(1vw,2vw,2vw)]'> Faucet </h2>
             <p className='text-[var(--grey-color)] text-center'> Claim your testnet tokens by following the instructions below </p>
         </aside>
-        {/* instructions */}
-        <Instructions />
 
-        {/* faucet details */}
-        <div className='w-full justify-center flex lg:flex-nowrap flex-wrap gap-[15px]'>
-            <ClaimFaucet />
-            <TokenStatus />
-        </div>
+            {/* instructions */}
+            <Instructions />
+
+            {/* faucet details */}
+            <div className='w-full justify-center flex lg:flex-nowrap flex-wrap gap-[15px]'>
+                <ClaimFaucet />
+                <TokenStatus />
+            </div>
     </section>
   )
 }

@@ -84,3 +84,8 @@ body {
 .spanning {
    grid-column: 1 / span 2;
 }
+
+/* faucet page */
+.list_instruction_container li::marker {
+  content: "💧"
+}

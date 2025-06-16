@@ -7,7 +7,7 @@ const Instructions = () => {
     <section className='w-full flex flex-col gap-[10px] glass_bg rounded-[15px] p-[20px]'>
         <h2 className='font-bold text-[clamp(18px,1vw,25px)]'> 🚧 Instructions </h2>
 
-        <ul className='flex w-full list-container flex-col gap-[10px] p-[20px]'>
+        <ul className='flex w-full list_instruction_container flex-col gap-[10px] p-[20px]'>
             { instructions.map((instruct, idx) => (
                 <li key={idx} className='w-full text-[clamp(14px,.7vw,16px)]'> {instruct} </li>
             )) }

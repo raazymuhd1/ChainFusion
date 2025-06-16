@@ -12,6 +12,12 @@ import { FaFaucet } from "react-icons/fa";
 import { FaArrowTrendUp, FaArrowTrendDown, FaDollarSign   } from "react-icons/fa6";
 // images
 import { circle } from "@/assets";
+import { StaticImageData } from "next/image";
+
+interface IPools {
+    [index: string]: string | number | StaticImageData; 
+}
+
 
 const countersData = [
     { 
@@ -179,11 +185,19 @@ const lendingCardInfo = [
     { id: 3, title: "Limit", value: "25,431.82" },
 ]
 
+
+const lendingPools = [
+    { id: 1, asset: "ETH", logo: circle,  supplyApy: "4.5", borrowApy: "12.3", liquidity: "2.1" },
+    { id: 2, asset: "USDC", logo: circle,  supplyApy: "4.5", borrowApy: "12.3", liquidity: "2.1" },
+    { id: 3, asset: "USDT", logo: circle,  supplyApy: "4.5", borrowApy: "12.3", liquidity: "2.1" },
+    { id: 4, asset: "WBTC", logo: circle,  supplyApy: "4.5", borrowApy: "12.3", liquidity: "2.1" },
+]
+
 export { 
     countersData, cards, 
     sidebarLinks, dummyDashboard, 
     quickActions, recentTxs, recentTxsHeader, notifSettings, 
     stakingData, availablePools,
     tokensOption, tokensStatus,
-    lendingData, lendingCardInfo
+    lendingData, lendingCardInfo, lendingPools
 }

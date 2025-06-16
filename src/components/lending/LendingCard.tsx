@@ -34,7 +34,7 @@ const LendingCard = () => {
          }
 
   return (
-    <aside className='p-[20px] grid grid-cols-[repeat(1,minmax(0,1fr))] gap-[10px] rounded-[15px] w-[40%] glass_bg'>
+    <aside className='p-[20px] grid grid-cols-1 gap-[10px] rounded-[15px] w-[80%]   glass_bg'>
         {/* tabs */}
         <div className='w-full max-h-[fit-content] border-[1px] flex items-center p-[10px] rounded-[15px]'>
             { activeTabs.map(tab => (

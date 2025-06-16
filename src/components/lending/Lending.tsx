@@ -14,7 +14,7 @@ const Lending = () => {
         {/* lending info */}
         <LendingInfo />
 
-        <aside className='w-full grid gap-[20px] grid-cols-[repeat(2,minmax(0,1fr))]'>
+        <aside className='w-full grid grid-cols-[repeat(auto-fit,minmax(0,1fr))]'>
           {/* lending supply & borrow card */}
           <LendingCard />
           {/* available lending pools */}

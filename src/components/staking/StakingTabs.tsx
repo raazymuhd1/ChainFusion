@@ -28,7 +28,7 @@ const StakingTabs = () => {
      console.log(activeTabs)
 
   return (
-    <section className='w-full h-[300px] grid grid-rows-[repeat(2)] gap-[20px] box-border'>
+    <section className='w-full min-h-[300px] grid grid-rows-[repeat(2)] gap-[20px]'>
         <div className='w-[30%] max-h-[fit-content] border-[1px] flex items-center p-[10px] rounded-[15px]'>
             { activeTabs.map(tab => (
                 <h4 
