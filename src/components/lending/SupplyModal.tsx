@@ -4,12 +4,14 @@ import { circle } from '@/assets'
 import { supplyInfo } from "@/constants"
 import { X } from "lucide-react"
 import { CustomButton } from "@/components"
-
+import { useAppSelector } from "@/hooks/reduxHooks"
 
 
 const SupplyModal = () => {
+      const { showModal } = useAppSelector(state => state.state)
+
   return (
-    <section className={`w-[100vw] h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! modal_glass`}>
+    <section className={`w-[100vw] ${!showModal && "hidden"} h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! modal_glass`}>
         {/* modal's card */}
         <div className='w-[30%] h-[50%] min-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
             <div className='flex w-full items-center justify-between'>

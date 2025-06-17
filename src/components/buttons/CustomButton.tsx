@@ -5,6 +5,7 @@ interface IProps {
     styles: string;
     title: string;
     Icon?: IconType;
+    handleClick?: () => boolean;
 }
 
 const CustomButton = ({styles, title, Icon}: IProps) => {

@@ -22,7 +22,7 @@ const Lending = () => {
           <LendingPools />
         </aside>
 
-         {/* <SupplyModal /> */}
+         <SupplyModal />
     </section>
   )
 }
