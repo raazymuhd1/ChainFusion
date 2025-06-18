@@ -14,7 +14,7 @@ const BorrowModal = () => {
   return (
     <section className={`w-[100vw] ${!showBorrowModal && "hidden"} h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! transition-[display_1s] modal_glass`}>
        <div 
-        className='w-[30%] h-[50%] min-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
+        className='w-[30%] h-[fit-content] min-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
              <div className='flex w-full items-center justify-between'>
                   <h3 className='font-bold text-[clamp(1em,1vw,1.5em)]'> Borrow ETH </h3>
                   <X onClick={() => dispatch(handleModal({ kind: "borrow", status: false }))}
@@ -55,12 +55,19 @@ const BorrowModal = () => {
 
                   return (
                     <div key={info.id} className='w-full flex items-center justify-between'>
-                        <p className='text-[var(--grey-color)]'> { APY || THRESHOLD ? `${info.title}%` : info.title } </p>
-                        <h4 className='font-semibold'> { info.value } </h4>
+                        <p className='text-[var(--grey-color)]'> { info.title } </p>
+                        <h4 className={`font-semibold ${APY || THRESHOLD ? "text-[var(--purple)]" : "text-[var(--main-text-color)]"} `}> { APY || THRESHOLD ? `${info.value}%` : info.value } </h4>
                     </div>
                   )
                 }) }
-          </aside>
+            </aside>
+
+            <div className='w-full p-[8px] rounded-[15px] border-[1px,var(--purple)] shadows_purple bg-transparent!'>
+              <p className='text-[var(--warning)]'> Make sure to maintain a healthy collateral ratio to avoid liquidation. </p>
+            </div>
+
+            {/* button */}
+            <CustomButton styles='w-[60%]! rounded-[2rem]! p-[8px] font-semibold bg-[var(--purple)] shadows_purple!' title='Supply' />
        </div>
     </section>
   )
