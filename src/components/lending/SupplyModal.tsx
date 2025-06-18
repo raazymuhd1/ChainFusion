@@ -1,22 +1,25 @@
+"use client"
 import React from 'react'
 import Image from "next/image"
 import { circle } from '@/assets'
 import { supplyInfo } from "@/constants"
 import { X } from "lucide-react"
 import { CustomButton } from "@/components"
-import { useAppSelector } from "@/hooks/reduxHooks"
-
+import { useAppSelector, useAppDispatch } from "@/hooks/reduxHooks"
+import { handleModal } from '@/redux/services/states'
 
 const SupplyModal = () => {
       const { showModal } = useAppSelector(state => state.state)
+      const dispatch = useAppDispatch()
 
   return (
-    <section className={`w-[100vw] ${!showModal && "hidden"} h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! modal_glass`}>
+    <section className={`w-[100vw] ${!showModal && "hidden"} h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! transition-[display_1s] modal_glass`}>
         {/* modal's card */}
         <div className='w-[30%] h-[50%] min-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
             <div className='flex w-full items-center justify-between'>
                 <h3 className='font-bold text-[clamp(1em,1vw,1.5em)]'> Supply ETH </h3>
-                <X className='w-[20px] h-[20px] cursor-pointer' />
+                <X onClick={() => dispatch(handleModal({ kind: "supply", status: false }))}
+                    className='w-[20px] h-[20px] cursor-pointer' />
             </div>
             <aside className='w-full glass_bg p-[10px] rounded-[15px]'>
                 <div className='flex items-center gap-[10px]'>

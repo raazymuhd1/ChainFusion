@@ -29,10 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Web3Provider> */}
+        <Web3Provider>
             {/* <Header /> */}
-            {children}
-        {/* </Web3Provider> */}
+              {children}
+        </Web3Provider>
       </body>
     </html>
   );

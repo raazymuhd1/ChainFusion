@@ -196,7 +196,13 @@ const lendingPools = [
 // supply modals
 const supplyInfo = [
     { id: 1, title: "Supply APY", value: "4.5" },
-    { id: 1, title: "Estimated Yearly Earnings", value: "5" }
+    { id: 2, title: "Estimated Yearly Earnings", value: "5" }
+]
+
+const borrowInfo = [
+    { id: 1, title: "Borrow APY", value: "12.5" },
+    { id: 2, title: "Health Factor", value: "1" },
+    { id: 3, title: "Liquidation Threshold", value: "80" }
 ]
 
 export { 
@@ -205,5 +211,5 @@ export {
     quickActions, recentTxs, recentTxsHeader, notifSettings, 
     stakingData, availablePools,
     tokensOption, tokensStatus,
-    lendingData, lendingCardInfo, lendingPools, supplyInfo
+    lendingData, lendingCardInfo, lendingPools, supplyInfo, borrowInfo
 }
