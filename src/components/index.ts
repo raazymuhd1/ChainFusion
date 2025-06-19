@@ -9,6 +9,7 @@ export { default as Footer } from "./footer/Footer"
 
 // MAIN APP
 export { default as Sidebar } from "./sidebar/Sidebar"
+export { default as MainHeader } from "./mainHeader/MainHeader"
 export { default as Dashboard } from "./dashboard/Dashboard"
 export { default as Settings } from "./settings/Settings"
 export { default as Staking } from "./staking/Staking"

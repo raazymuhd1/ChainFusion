@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <aside 
-      className={`w-[20%] shadows translate-x-[${sidebarWidth}px] glass_orange  h-screen sticky inset-0 border-[1px] border-[var(--main-color)] backdrop-blur-[10px] `}>
+      className={`w-[20%] shadows translate-x-[${sidebarWidth}px] glass_orange  h-screen sticky inset-0 border-[1px] border-[var(--main-color)] backdrop-blur-[10px] flex flex-col items-center gap-[30px] `}>
        <div className='w-full flex items-center justify-end'>
           <Link href="/" className='flex flex-col mt-[10px] w-full items-center gap-[6px] cursor-pointer'>
               <h2 className='text-[clamp(.5vw,2vw,2vw)] font-extrabold'> ChainFusion </h2>

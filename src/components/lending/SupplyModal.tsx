@@ -15,7 +15,7 @@ const SupplyModal = () => {
   return (
     <section className={`w-[100vw] ${!showModal && "hidden"} h-screen flex flex-col gap-[20px] place-content-center fixed inset-0 rounded-[0px]! transition-[display_1s] modal_glass`}>
         {/* modal's card */}
-        <div className='w-[30%] h-[50%] min-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
+        <div className='w-[30%] h-[fit-content] flex flex-col items-center gap-[20px] self-center glass_bg p-[20px] rounded-[15px]'>
             <div className='flex w-full items-center justify-between'>
                 <h3 className='font-bold text-[clamp(1em,1vw,1.5em)]'> Supply ETH </h3>
                 <X onClick={() => dispatch(handleModal({ kind: "supply", status: false }))}
