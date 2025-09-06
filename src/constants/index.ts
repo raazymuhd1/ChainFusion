@@ -65,7 +65,7 @@ const sidebarLinks = [
     { id: 1, title: "Dashboard", url: "/main", Icon: GoHome, isActive: true },
     { id: 2, title: "Bridge", url: "/main/bridge", Icon: LuArrowUpDown, isActive: false },
     { id: 3, title: "Swap", url: "/main/swap", Icon: LuArrowRightLeft, isActive: false },
-    { id: 4, title: "NFT Marketplace", url: "/main/marketplace", Icon: FiShoppingBag, isActive: false },
+    { id: 4, title: "Marketplace", url: "/main/marketplace", Icon: FiShoppingBag, isActive: false },
     { id: 5, title: "Lending", url: "/main/lending", Icon: FiShoppingBag, isActive: false },
     { id: 6, title: "Staking", url: "/main/staking", Icon: BiCoinStack, isActive: false },
     { id: 7, title: "Faucet", url: "/main/faucet", Icon: FaFaucet, isActive: false },
