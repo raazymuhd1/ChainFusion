@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className={`min-h-[500px] mt-[90px]  flex flex-col gap-[50px]`}>
+    <section className={`min-h-[500px] mt-[90px] flex flex-col gap-[50px]`}>
         
         <div className={`md:w-[20%] w-[80%] mx-auto flex items-center justify-center gap-[5px] rounded-[15px] glass_bg p-[5px]`}>
             {/* star */}
@@ -25,7 +25,8 @@ const Hero = () => {
             <Link href="/main">
                 <CustomButton styles='bg-[var(--warning)] opacity-[.8] hover:opacity-[1] transition-[opacity_1s]  p-[8px]' title="Start Exploring" Icon={FaArrowRightLong} />
             </Link>
-            <CustomButton styles='bg-[var(--main-text-color)] text-[var(--main-color)] opacity-[.8] hover:opacity-[1] transition-[opacity_1s] p-[8px]' title="Watch Demo" />
+            <CustomButton 
+                styles='bg-[var(--main-text-color)] text-[var(--main-color)] opacity-[.8] hover:opacity-[1] transition-[opacity_1s] p-[8px]' title="Watch Demo" />
         </div>
     </section>
   )
